@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+}
+
+:root {
+  --bg: url(./assets/main-bg-landscape.webp);
+}
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  height: 100px;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #000;
+}
+
+header .go-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  flex: 1;
+}
+
+.logo-wrapper {
+  color: white;
+  max-width: 144px;
+}
+
+.logo-wrapper span {
+  float: right;
+  font-size: 12px;
+}
+
+.go-navigation__left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #fff;
+  gap: 24px;
+}
+
+.go-navigation__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #fff;
+  gap: 24px;
+}
+
+.go-hero {
+  border: 1px solid;
+  width: 100%;
+  height: 70%;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px 24px;
+}
+
+.go-hero__top {
+  background-color: green;
+  grid-column: 1 / span 12;
+}
+
+.go-hero__left {
+  --div-bg: var(--bg);
+  background-image: var(--div-bg);
+  background-attachment: scroll;
+  background-size: 100% 100%;
+  border-radius: 24px;
+  grid-row: 2 / span 5;
+  grid-column: 1 / span 8;
+}
+
+.go-hero__right {
+  grid-row: 2 / span 5;
+  grid-column: 9 / span 4;
+  background-color: red;
+}
